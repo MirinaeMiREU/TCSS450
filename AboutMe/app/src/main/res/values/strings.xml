@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">About Me</string>
+    <string name="button_text">TEXT</string>
+    <string name="button_image">IMAGE</string>
+    <string name="button_web">WEB</string>
+    <string name="button_toast">TOAST</string>
+    <string name="button_dialog">DIALOG</string>
+    <string name="text_description">
+        Peter Bae\n
+        Graduating Fall 2018\n
+        No job yet (hopefully this class will help)\n
+        Favorite class : Algorithms
+    </string>
+</resources>
