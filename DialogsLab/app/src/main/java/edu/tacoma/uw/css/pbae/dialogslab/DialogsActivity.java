@@ -36,7 +36,6 @@ public class DialogsActivity extends AppCompatActivity {
 
             NotificationManagerCompat notificationManager = NotificationManagerCompat.from(this);
             notificationManager.notify(1991, mBuilder.build());
-            new NotificationFragment();
         }
 
 
