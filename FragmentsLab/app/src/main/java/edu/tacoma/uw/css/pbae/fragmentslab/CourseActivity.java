@@ -42,7 +42,7 @@ public class CourseActivity extends AppCompatActivity implements CourseListFragm
                     .replace(R.id.course_fragment_container, courseDetailFragment)
                     .addToBackStack(null);
             // Commit the transaction
-            //   transaction.commit();
+               transaction.commit();
         }
     }
 }
