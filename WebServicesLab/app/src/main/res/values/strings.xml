@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Web Services Lab</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="course_id">Enter Course ID (Ex. TCSS450)</string>
+    <string name="short_desc">Enter Course Short Description (Ex. Mobile App Programming)</string>
+    <string name="long_desc">Enter Course Long Description</string>
+    <string name="prereqs">Enter Prerequisites</string>
+    <string name="button_add">Add Course</string>
+    <string name="button_edit">Edit Course</string>
+</resources>
