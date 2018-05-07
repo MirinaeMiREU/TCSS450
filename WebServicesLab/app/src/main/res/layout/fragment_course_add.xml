@@ -8,6 +8,7 @@
     tools:context=".CourseAddFragment">
 
     <EditText
+        style="@style/CourseIdEditTextStyle"
         android:id="@+id/add_course_id"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -17,6 +18,7 @@
         android:singleLine="false" />
 
     <EditText
+        style="@style/EditTextStyle"
         android:id="@+id/add_course_short_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,6 +27,7 @@
         android:inputType="textPersonName" />
 
     <EditText
+        style="@style/EditTextStyle"
         android:id="@+id/add_course_long_desc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -33,6 +36,7 @@
         android:inputType="textPersonName" />
 
     <EditText
+        style="@style/EditTextStyle"
         android:id="@+id/add_course_prereqs"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -41,6 +45,7 @@
         android:inputType="textPersonName" />
 
     <Button
+        style="@style/button"
         android:id="@+id/btnCourse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
