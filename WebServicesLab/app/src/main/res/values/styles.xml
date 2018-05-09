@@ -7,13 +7,12 @@
         <item name="colorAccent">@color/uwMetallicGold</item>
         <item name="android:textColor">@color/uwPurple</item>
         <item name="android:textSize">24sp</item>
-        <item name="android:tint">@color/uwPurple</item>
         <item name="android:editTextColor">@color/uwDarkGray</item>
         <item name="android:textColorHint">@color/uwDarkGray</item>
     </style>
     <style name="button">
-        <item name="android:textColor">@color/uw_button_colors</item>
         <item name="android:background">@drawable/uw_button</item>
+        <item name="android:textColor">@color/uw_button_colors</item>
     </style>
     <style name="button2">
         <item name="android:textColor">@color/uw_button_colors2</item>
