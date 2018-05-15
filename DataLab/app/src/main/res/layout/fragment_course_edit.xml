@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".courses.CourseEditFragment">
+
+    <EditText
+        android:id="@+id/edit_course_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="none"
+        android:singleLine="false" />
+
+    <EditText
+        android:id="@+id/edit_course_short_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/short_desc"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edit_course_long_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/long_desc"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/edit_course_prereqs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/prereqs"
+        android:inputType="textPersonName" />
+
+    <Button
+        style="@style/button2"
+        android:id="@+id/btnEditCourse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_edit" />
+
+</LinearLayout>

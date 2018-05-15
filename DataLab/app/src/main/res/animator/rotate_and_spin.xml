@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android"
+    android:ordering="sequentially">
+    <objectAnimator
+        android:duration="1000"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:propertyName="rotationY"
+        android:valueFrom="0"
+        android:valueTo="90" />
+    <set>
+        <objectAnimator
+            android:duration="0"
+            android:propertyName="backgroundColor"
+            android:valueTo="@color/uwGold" />
+        <objectAnimator
+            android:duration="0"
+            android:propertyName="textColor"
+            android:valueTo="@color/uwPurple" />
+    </set>
+    <objectAnimator
+        android:duration="1000"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:propertyName="rotationY"
+        android:valueFrom="-90"
+        android:valueTo="0" />
+    <objectAnimator
+        android:duration="1000"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:propertyName="rotationX"
+        android:valueFrom="0"
+        android:valueTo="90" />
+    <set>
+        <objectAnimator
+            android:duration="0"
+            android:propertyName="backgroundColor"
+            android:valueTo="@color/uwPurple" />
+        <objectAnimator
+            android:duration="0"
+            android:propertyName="textColor"
+            android:valueTo="@color/uwGold" />
+    </set>
+    <objectAnimator
+        android:duration="1000"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:propertyName="rotationX"
+        android:valueFrom="-90"
+        android:valueTo="0" />
+    <objectAnimator
+        android:duration="1000"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:propertyName="rotation"
+        android:valueFrom="0"
+        android:valueTo="360" />
+    <set>
+        <objectAnimator
+            android:duration="0"
+            android:propertyName="pivotY"
+            android:valueTo="0" />
+        <objectAnimator
+            android:duration="0"
+            android:propertyName="pivotX"
+            android:valueTo="0" />
+    </set>
+    <objectAnimator
+        android:duration="1000"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:propertyName="rotation"
+        android:valueFrom="0"
+        android:valueTo="360" />
+
+</set>

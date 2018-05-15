@@ -1,0 +1,43 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/uwMetallicGold</item>
+        <item name="colorPrimaryDark">@color/uwGold</item>
+        <item name="colorAccent">@color/uwMetallicGold</item>
+        <item name="android:textColor">@color/uwPurple</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:editTextColor">@color/uwDarkGray</item>
+        <item name="android:textColorHint">@color/uwDarkGray</item>
+    </style>
+    <style name="button">
+        <item name="android:background">@drawable/uw_button</item>
+        <item name="android:textColor">@color/uw_button_colors</item>
+    </style>
+    <style name="button2">
+        <item name="android:textColor">@color/uw_button_colors2</item>
+        <item name="android:background">@drawable/uw_button2</item>
+    </style>
+    <!-- Styles for all EditText -->
+    <style name="EditTextStyle" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/uwDarkGray</item>
+        <item name="android:typeface">monospace</item>
+    </style>
+
+    <style name="CourseIdEditTextStyle" parent="EditTextStyle">
+        <item name="android:textSize">24sp</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>

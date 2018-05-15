@@ -1,14 +1,16 @@
-package edu.tacoma.uw.pbae.webserviceslab;
+package edu.tacoma.uw.css.pbae.datalab.courses;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.AsyncTask;
-import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
-import android.view.View;
+import android.support.design.widget.FloatingActionButton;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -20,12 +22,14 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
-import edu.tacoma.uw.pbae.webserviceslab.course.Course;
+import edu.tacoma.uw.css.pbae.datalab.R;
+import edu.tacoma.uw.css.pbae.datalab.authenticate.SignInActivity;
+import edu.tacoma.uw.css.pbae.datalab.data.CourseDB;
 
 public class CourseActivity extends AppCompatActivity
-                            implements CourseListFragment.OnListFragmentInteractionListener,
-                                       CourseAddFragment.CourseAddListener,
-                                       CourseEditFragment.CourseEditListener {
+        implements CourseListFragment.OnListFragmentInteractionListener,
+        CourseAddFragment.CourseAddListener,
+        CourseEditFragment.CourseEditListener {
     private CourseListFragment mList;
     private CourseDetailFragment mDetail;
 
@@ -51,8 +55,8 @@ public class CourseActivity extends AppCompatActivity
         });
         mList = new CourseListFragment();
         getSupportFragmentManager().beginTransaction()
-                                   .add(R.id.fragment_container, mList)
-                                   .commit();
+                .add(R.id.fragment_container, mList)
+                .commit();
     }
 
     @Override
@@ -75,6 +79,14 @@ public class CourseActivity extends AppCompatActivity
         } else if (id == R.id.action_animation) {
             Intent intent = new Intent(this, AnimationsActivity.class);
             startActivity(intent);
+        } else if (item.getItemId() == R.id.action_logout) {
+            SharedPreferences sharedPreferences =
+                    getSharedPreferences(getString(R.string.LOGIN_PREFS), Context.MODE_PRIVATE);
+            sharedPreferences.edit().putBoolean(getString(R.string.LOGGEDIN), false)
+                    .commit();
+            Intent i = new Intent(this, SignInActivity.class);
+            startActivity(i);
+            finish();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -146,23 +158,23 @@ public class CourseActivity extends AppCompatActivity
         @Override
         protected void onPostExecute(String result) {
             // Something wrong with the network or the URL.
-                try {
-                    JSONObject jsonObject = new JSONObject(result);
-                    String status = (String) jsonObject.get("result");
-                    if (status.equals("success")) {
-                        Toast.makeText(getApplicationContext(), "Course successfully added!"
-                                , Toast.LENGTH_LONG)
-                                .show();
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Failed to add: "
-                                + jsonObject.get("error")
-                                , Toast.LENGTH_LONG)
-                                .show();
-                    }
-                } catch (JSONException e) {
-                    Toast.makeText(getApplicationContext(), "Something wrong with the data " +
-                            e.getMessage(), Toast.LENGTH_LONG).show();
+            try {
+                JSONObject jsonObject = new JSONObject(result);
+                String status = (String) jsonObject.get("result");
+                if (status.equals("success")) {
+                    Toast.makeText(getApplicationContext(), "Course successfully added!"
+                            , Toast.LENGTH_LONG)
+                            .show();
+                } else {
+                    Toast.makeText(getApplicationContext(), "Failed to add: "
+                                    + jsonObject.get("error")
+                            , Toast.LENGTH_LONG)
+                            .show();
                 }
+            } catch (JSONException e) {
+                Toast.makeText(getApplicationContext(), "Something wrong with the data " +
+                        e.getMessage(), Toast.LENGTH_LONG).show();
+            }
         }
     }
 
